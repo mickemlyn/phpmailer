@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+<script src="bootstrap-3.3.6-dist/js/jquery-2.2.2.min.js"></script>
+<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<title>Print Page</title>
+<script type="text/javascript">
+  function printlayer(layer){
+      var generator = window.open(",'name,");
+      var layertext = document.getElementById(layer);
+      generator.document.write(layertext.innerHTML.replace("Print Me"));
+      
+      generator.document.close();
+      generator.print();
+      generator.close();
+  }  
+</script>
+    
+</head>
+<body >
+<div style="font-family: Arial, Helvetica, sans-serif; color: #777;">
+<h1 style=" margin-bottom: 20px; font-size: 16px; font-weight: 300; line-height: 1.4;">New Order Placed. Order Details:-</h1>
+<div align="center">
+</div>
+<div style=" min-height: 20px; padding: 19px; margin-bottom: 20px; background-color: #f5f5f5; border: 1px solid #e3e3e3; border-radius: 4px; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05); box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);">
+<div class="pull-right">
+    <a href="#" id="print" class="btn btn-success btn-lg" onclick="javascript:printlayer('printiidiv')">
+    <span class="glyphicon glyphicon-print"></span> Print 
+    </a>  
+    </div>
+<!-- print -->
+<div id="printiidiv">
+<h3 align="center">Order Summary for Order No.10018</h3>  
+<div>  
+<table style="border: 1px solid #ddd; width: 100%; max-width: 100%; margin-bottom: 20px; text-align: left;">  
+<tr><td><label style="text-decoration: underline black;"><strong>Customer Details</strong></label></td>  
+</tr>  
+<tr>  
+<td>  
+<label>Capital Branch</label>  
+<p>Capital Centre - Along Mombasa</p>  
+<p>Nairobi, P.O. Box 722 - 00100</p>  
+<p>Kenya</p><p> Phone:  4215</p></td>  
+</tr>  
+<tr><td><label style="text-decoration: underline black;"><strong>Order Details</strong></label></td>  
+</tr>  
+<tr><td><table>  
+<tr>  
+<th width="50%">Product Name</th>
+<th width="15%">Quantity</th>  
+<th width="15%">Price</th>  
+<th width="20%">Total</th>  
+</tr>  
+<tr>  
+<td>Micke </td>  
+<td>1</td>  <td>700.00</td>  
+<td>700.00</td></tr>  
+<tr>  
+<td>lg hr5</td>  
+<td>1</td>  <td>5000.00</td>  
+<td>5,000.00</td></tr>  
+<tr>  
+<td>Tipp Mini Pocket Mouse Decors</td>  
+<td>1</td>  <td>450.00</td>  
+<td>450.00</td></tr>  
+<tr><td colspan="3"><label><strong>Total Amount</strong></label></td>  
+<td>Kshs. 6,150.00</td></tr></table></td>  
+</tr></table></div> 
+    </div>
+<!-- print -->
+<a  href="http://localhost/mickemlyn/CIB/cart.php" style="color: #fff; background-color: #5cb85c; border-color: #4cae4c; display: inline-block; padding: 6px 12px; margin-bottom: 0; font-size: 14px; font-weight: normal; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid transparent; border-radius: 4px; text-decoration: none" >Click to Approve Order</a>
+</div>
+
+</div>
+
+</body>
+</html>
